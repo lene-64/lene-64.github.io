@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>蚵仔煎</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", sans-serif;
+      background: #f6f1e9; /* 米白色 */
+      color: #4b3621;     /* 深棕色 */
+      line-height: 1.9;
+    }
+
+    nav {
+      padding: 22px 40px;
+      display: flex;
+      gap: 28px;
+      border-bottom: 1px solid #d8cfc4;
+      position: sticky;
+      top: 0;
+      background: #f6f1e9;
+    }
+
+    nav a {
+      cursor: pointer;
+      text-decoration: none;
+      color: #4b3621;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 64px auto;
+      padding: 0 24px;
+    }
+
+    h1 {
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      margin-bottom: 28px;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .review {
+      border-left: 3px solid #c3b5a6;
+      padding-left: 18px;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+    }
+
+    .menu-item {
+      margin-bottom: 32px;
+    }
+
+    .menu-item strong {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a onclick="showPage('home')">首頁</a>
+  <a onclick="showPage('menu')">菜單</a>
+  <a onclick="showPage('reviews')">客人留言</a>
+  <a onclick="showPage('about')">關於我們</a>
+</nav>
+
+<!-- 首頁 -->
+<section id="home" class="page active">
+  <div class="hero">
+    <img src="oyster.jpg" alt="蚵仔煎">
+  </div>
+
+  <div class="container">
+    <h1>我們賣蚵仔煎</h1>
+    <p>
+      每一份都是現場煎的。<br>
+      味道明確，立場鮮明。<br>
+      沒有打算讓所有人都滿意。
+    </p>
+  </div>
+</section>
+
+<!-- 菜單 -->
+<section id="menu" class="page">
+  <div class="container">
+    <h1>菜單</h1>
+
+    <div class="menu-item">
+      <strong>蚵仔煎</strong><br>
+      NT$ 70<br>
+      蚵仔、雞蛋、青菜，以及一個不太低調的味道
+    </div>
+
+    <div class="menu-item">
+      <strong>加蛋蚵仔煎</strong><br>
+      NT$ 80<br>
+      蛋比較多，氣味並不因此變得溫和
+    </div>
+
+    <div class="menu-item">
+      <strong>加蚵蚵仔煎</strong><br>
+      NT$ 90<br>
+      蚵仔存在感明顯，適合心理狀態穩定的人
+    </div>
+  </div>
+</section>
+
+<!-- 客人留言 -->
+<section id="reviews" class="page">
+  <div class="container">
+    <h1>客人留言</h1>
+
+    <div class="review">
+      「我原本只是想吃個晚餐，沒想到味道讓我聯想到大便。
+      這不是情緒性的評論，是一個很直接的聯想。」
+    </div>
+
+    <div class="review">
+      「同行友人表示完全沒有大便味，
+      這讓我開始懷疑是不是我自己的問題。」
+    </div>
+
+    <div class="review">
+      「氣味出現的那一瞬間，我腦中浮現的是大便，
+      但我還是把整份吃完了，出於對食物的尊重。」
+    </div>
+
+    <div class="review">
+      「如果你對『像不像大便』這件事有明確標準，
+      這裡會是一個測試自己感受力的好地方。」
+    </div>
+
+    <div class="review">
+      「我沒有給一星，因為老闆在我說出『大便』兩個字時，
+      表情非常平靜，看起來已經聽過很多次了。」
+    </div>
+  </div>
+</section>
+
+<!-- 關於我們 -->
+<section id="about" class="page">
+  <div class="container">
+    <h1>關於我們</h1>
+    <p>
+      我們知道這個味道不討好。<br>
+      甚至有明確的比喻出現過。
+    </p>
+
+    <p>
+      但它一直都是這樣。<br>
+      如果你吃完後表情有點困惑，<br>
+      那代表這份蚵仔煎很誠實。
+    </p>
+  </div>
+</section>
+
+<script>
+  function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(page => {
+      page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
