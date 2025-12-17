@@ -35,23 +35,12 @@
       opacity: 0.6;
     }
 
-    .hero {
-      position: relative;
-    }
-
+    /* 首頁照片本尊 */
     .hero img {
       width: 100%;
-      height: 72vh;
+      height: 80vh;
       object-fit: cover;
-    }
-
-    .hero-text {
-      position: absolute;
-      bottom: 40px;
-      left: 40px;
-      background: rgba(246, 241, 233, 0.85);
-      padding: 24px 28px;
-      max-width: 420px;
+      display: block;
     }
 
     .container {
@@ -74,14 +63,12 @@
       display: block;
     }
 
-    .review {
-      margin-bottom: 48px;
+    .menu-item {
+      margin-bottom: 28px;
     }
 
-    .review img {
-      width: 220px;
-      margin-top: 12px;
-      border-radius: 4px;
+    .review {
+      margin-bottom: 48px;
     }
 
     .review-text {
@@ -91,8 +78,10 @@
       font-size: 0.95rem;
     }
 
-    .menu-item {
-      margin-bottom: 28px;
+    .review img {
+      width: 220px;
+      margin-top: 12px;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -107,117 +96,20 @@
 
 <!-- 首頁 -->
 <section id="home" class="page active">
+  <!-- 第一眼：照片 -->
   <div class="hero">
-    <img src="hero_oyster.jpg" alt="蚵仔煎正式攝影照">
-    <div class="hero-text">
-      <strong>蚵仔煎 🦪</strong><br>
+    <img src="hero_oyster.jpg" alt="正式攝影的蚵仔煎，粉色羽毛背景">
+  </div>
+
+  <!-- 照片之後才開始說話 -->
+  <div class="container">
+    <h1>蚵仔煎 🦪</h1>
+
+    <p>
       攝影機拍的。<br>
       很正式。<br>
-      背景有粉色的羽毛在飄。<br>
-      味道沒有因此變溫柔。
-    </div>
-  </div>
-
-  <div class="container">
-    <h1>我們賣蚵仔煎</h1>
-    <p>
-      這是一份結構完整的蚵仔煎。<br>
-      有蚵仔、有蛋、有粉漿，也有明確的氣味走向。<br>
-      🦪🦪🦪
+      背景有粉色的羽毛在飄。
     </p>
 
     <p>
-      有些人一吃就懂。<br>
-      有些人會停下來思考。<br>
-      也有人會想到別的東西。
-    </p>
-
-    <p>
-      我們每天照一樣的方式煎。<br>
-      沒有因為留言而調整火候。<br>
-      也沒有因為比喻而改變配方。
-    </p>
-  </div>
-</section>
-
-<!-- 菜單 -->
-<section id="menu" class="page">
-  <div class="container">
-    <h1>菜單</h1>
-
-    <div class="menu-item">
-      <strong>蚵仔煎 🦪</strong><br>
-      NT$70<br>
-      味道直接，沒有多餘修辭
-    </div>
-
-    <div class="menu-item">
-      <strong>加蛋蚵仔煎</strong><br>
-      NT$80<br>
-      結構更完整，氣味依舊
-    </div>
-
-    <div class="menu-item">
-      <strong>加蚵蚵仔煎 🦪🦪</strong><br>
-      NT$90<br>
-      蚵仔很多，聯想也比較多
-    </div>
-  </div>
-</section>
-
-<!-- 客人留言 -->
-<section id="reviews" class="page">
-  <div class="container">
-    <h1>客人留言</h1>
-
-    <div class="review">
-      <div class="review-text">
-        「味道讓我想到大便。<br>
-        我知道這樣說很失禮，但聯想是自動出現的。」
-      </div>
-      <img src="review1.jpg" alt="客人拍的蚵仔煎">
-    </div>
-
-    <div class="review">
-      <div class="review-text">
-        「我朋友完全沒有這個感覺。<br>
-        這讓我開始反省自己的嗅覺系統。」
-      </div>
-      <img src="review2.jpg" alt="手機拍的蚵仔煎">
-    </div>
-
-    <div class="review">
-      <div class="review-text">
-        「我把照片拍下來，是想確認是不是只有我這樣覺得。」
-      </div>
-      <img src="review3.jpg" alt="歪歪的蚵仔煎照片">
-    </div>
-  </div>
-</section>
-
-<!-- 關於我們 -->
-<section id="about" class="page">
-  <div class="container">
-    <h1>關於我們</h1>
-    <p>
-      蚵仔是一種味道很明確的食材。<br>
-      明確到有時候會引發討論。
-    </p>
-
-    <p>
-      如果你吃完之後沉默了一下，<br>
-      那我們大概知道你在想什麼。
-    </p>
-  </div>
-</section>
-
-<script>
-  function showPage(pageId) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(pageId).classList.add('active');
-  }
-</script>
-
-</body>
-</html>
-
+      這並沒有讓
