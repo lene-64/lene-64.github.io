@@ -51,7 +51,7 @@
     h1 {
       font-weight: 500;
       letter-spacing: 0.1em;
-      margin-bottom: 18px;
+      margin-bottom: 28px;
     }
 
     .page {
@@ -62,9 +62,38 @@
       display: block;
     }
 
-    .menu-item {
-      margin-bottom: 28px;
+    /* ===== 展覽牆菜單 ===== */
+
+    .menu-wall {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
     }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      opacity: 0.85;
+      filter: contrast(0.95) saturate(0.9);
+    }
+
+    .menu-text {
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .menu-text strong {
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== 留言 ===== */
 
     .review {
       margin-bottom: 48px;
@@ -100,12 +129,10 @@
 
 <!-- 首頁 -->
 <section id="home" class="page active">
-  <!-- 第一眼：照片本尊 -->
   <div class="hero">
     <img src="蚵仔煎.jpg" alt="正式攝影的蚵仔煎，粉色羽毛背景">
   </div>
 
-  <!-- 大量文字從這裡開始 -->
   <div class="container">
     <h1>蚵仔煎 🦪</h1>
 
@@ -162,27 +189,38 @@
   </div>
 </section>
 
-<!-- 菜單 -->
+<!-- 菜單（展覽牆） -->
 <section id="menu" class="page">
   <div class="container">
     <h1>菜單</h1>
 
-    <div class="menu-item">
-      <strong>蚵仔煎 🦪</strong><br>
-      NT$70<br>
-      標準版本，氣味清楚
-    </div>
+    <div class="menu-wall">
+      <div class="menu-item">
+        <img src="menu-01.jpg" alt="蚵仔煎">
+        <div class="menu-text">
+          <strong>蚵仔煎 🦪</strong><br>
+          NT$70<br>
+          標準版本，氣味清楚
+        </div>
+      </div>
 
-    <div class="menu-item">
-      <strong>加蛋蚵仔煎</strong><br>
-      NT$80<br>
-      結構更完整，聯想不減
-    </div>
+      <div class="menu-item">
+        <img src="menu-02.jpg" alt="加蛋蚵仔煎">
+        <div class="menu-text">
+          <strong>加蛋蚵仔煎</strong><br>
+          NT$80<br>
+          結構更完整，聯想不減
+        </div>
+      </div>
 
-    <div class="menu-item">
-      <strong>加蚵蚵仔煎 🦪🦪</strong><br>
-      NT$90<br>
-      蚵仔增加，思考時間拉長
+      <div class="menu-item">
+        <img src="menu-03.jpg" alt="加蚵蚵仔煎">
+        <div class="menu-text">
+          <strong>加蚵蚵仔煎 🦪🦪</strong><br>
+          NT$90<br>
+          蚵仔增加，思考時間拉長
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -245,4 +283,3 @@
 
 </body>
 </html>
-
